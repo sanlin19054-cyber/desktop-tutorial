@@ -6,10 +6,7 @@ void USART_SendString(char *str)
 {
 	 while(*str)
     {
-        HAL_UART_Transmit(&huart1,
-                          (uint8_t *)str,
-                          1,
-                          100);
+        HAL_UART_Transmit(&huart1, (uint8_t *)str, 1,  100);
 
         str++;
 		}
