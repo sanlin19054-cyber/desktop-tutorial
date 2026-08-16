@@ -146,9 +146,7 @@ void Avoidance_Init(void)
 /*==========================================================
   避障主程序
 ==========================================================*/
-void Avoidance_Run(uint32_t head,
-                   uint32_t left,
-                   uint32_t right)
+void Avoidance_Run(uint32_t head, uint32_t left,  uint32_t right)
 {
 
     /*======================================================

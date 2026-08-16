@@ -15,8 +15,7 @@ void Avoidance_Init(void);
  * left  : 左侧距离(cm)
  * right : 右侧距离(cm)
  */
-void Avoidance_Run(uint32_t head,
-                   uint32_t left,
-                   uint32_t right);
+#include <stdint.h>
+void Avoidance_Run(uint32_t head, uint32_t left, uint32_t right);
 
 #endif
