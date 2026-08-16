@@ -14,17 +14,17 @@ void SERVO_SetAngle(uint8_t angle)
     uint16_t pwm;
 
     // 限制角度
-    if(angle > 180)
+    if(angle > 135)
     {
-        angle = 180;
+        angle = 135;
     }
 
     /*
         0度   500us
-        180度 2500us
+        135度 2500us
     */
 
-    pwm = 500 + (angle * 2000 / 180);
+    pwm = 500 + (angle * 2000 / 135);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pwm);
 
 }
