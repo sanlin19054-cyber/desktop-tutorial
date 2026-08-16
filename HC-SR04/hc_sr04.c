@@ -1,16 +1,18 @@
 #include "hc_sr04.h" 
 #include "tim.h"
 
+
 /*==========================================================
   DWT 微秒计时初始化
   STM32F103C8T6 主频 72MHz
   DWT->CYCCNT 每个 CPU cycle 计数一次
 ==========================================================*/
 
+
 static void DWT_Delay_Init(void)
 {
     /* 开启 DWT */
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    (*(volatile uint32_t *)0xE000EDFC) |= 0x01000000;
 
     /* 开启 CYCCNT */
     DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
@@ -18,6 +20,7 @@ static void DWT_Delay_Init(void)
     /* 清零计数器 */
     DWT->CYCCNT = 0;
 }
+
 
 /*==========================================================
   DWT 微秒延时
@@ -44,6 +47,7 @@ static void DWT_Delay_us(uint32_t us)
     }
 }
 
+
 /*==========================================================
   HC-SR04 初始化
 ==========================================================*/
@@ -55,7 +59,6 @@ void HC_SR04_Init(void)
     /* TRIG 初始为低电平 */
     HAL_GPIO_WritePin(HC_SR04_TRIG_PORT, HC_SR04_TRIG_PIN, GPIO_PIN_RESET);
 }
-
 
 
 /*==========================================================
@@ -74,16 +77,19 @@ uint32_t HC_SR04_GetDistance(void)
     uint32_t time_us;
     uint32_t timeout;
 
+	
     /*======================================================
       1. 发送 TRIG 触发脉冲
 
       HC-SR04 需要至少约 10us 高电平
     ======================================================*/
 
-    HAL_GPIO_WritePin(HC_SR04_TRIG_PORT, HC_SR04_TRIG_PIN, GPIO_PIN_SET);
+#include "stm32f1xx_hal_gpio.h"
+HAL_GPIO_WritePin(HC_SR04_TRIG_PORT, HC_SR04_TRIG_PIN, GPIO_PIN_SET);
     DWT_Delay_us(10);
     HAL_GPIO_WritePin(HC_SR04_TRIG_PORT, HC_SR04_TRIG_PIN, GPIO_PIN_RESET);
 
+	
     /*======================================================
       2. 等待 ECHO 变高
     ======================================================*/
@@ -105,11 +111,13 @@ uint32_t HC_SR04_GetDistance(void)
         }
     }
 
+		
     /*======================================================
       3. ECHO变高，开始计时
     ======================================================*/
     start = DWT->CYCCNT;
 
+		
     /*======================================================
       4. 等待 ECHO 变低
     ======================================================*/
