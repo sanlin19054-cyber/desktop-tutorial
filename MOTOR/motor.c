@@ -104,9 +104,9 @@ void Right_Motor(int speed)
         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
         speed = -speed;
     }
-		
- // PWM輸出
-    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, speed*10);
+
+ // PWM輸出（右電機 PWMB 接 PA6 = TIM3_CH1，這裡必須用 CH1）
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, speed*10);
 }
 
 /*
