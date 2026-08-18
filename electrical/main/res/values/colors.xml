@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主題色：霓虹青 -->
+    <color name="primary">#00E0FF</color>
+    <color name="primary_dark">#00A8CC</color>
+    <color name="primary_light">#33E6FF</color>
+
+    <!-- 背景 -->
+    <color name="bg_page_start">#0B1020</color>
+    <color name="bg_page_end">#131A2E</color>
+    <color name="bg_card">#1A2238</color>
+    <color name="bg_card_hover">#223055</color>
+    <color name="bg_input">#0F1729</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="text_disabled">#475569</color>
+
+    <!-- 語義 -->
+    <color name="success">#22C55E</color>
+    <color name="warning">#FF8A3D</color>
+    <color name="danger">#EF4444</color>
+
+    <!-- 邊框 -->
+    <color name="border">#2600E0FF</color>
+    <color name="border_light">#1F94A3B8</color>
+
+    <!-- LED -->
+    <color name="led_on">#FACC15</color>
+    <color name="led_off">#475569</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

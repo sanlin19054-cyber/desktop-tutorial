@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 橫版藍牙設備選擇頁：頂部標題+掃描按鈕水平排列，下方設備列表填滿 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_page"
+    android:orientation="vertical">
+
+    <!-- 頂部：標題 + 掃描按鈕 + 狀態（水平排列） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_page_start"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_device_list"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="點擊掃描查找設備"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btnScan"
+            style="@style/PrimaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:minWidth="120dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="13sp"
+            android:text="@string/label_scan"/>
+    </LinearLayout>
+
+    <!-- 設備列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDevices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical"/>
+</LinearLayout>

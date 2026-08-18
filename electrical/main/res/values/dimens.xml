@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圓角 -->
+    <dimen name="radius_card">24dp</dimen>
+    <dimen name="radius_button">48dp</dimen>
+    <dimen name="radius_small">16dp</dimen>
+
+    <!-- 尺寸 -->
+    <dimen name="dp_card_padding">16dp</dimen>
+    <dimen name="dp_section_margin">16dp</dimen>
+    <dimen name="dp_button_h">80dp</dimen>
+    <dimen name="dp_button_h_lg">96dp</dimen>
+
+    <!-- 字體 -->
+    <dimen name="sp_xs">12sp</dimen>
+    <dimen name="sp_sm">14sp</dimen>
+    <dimen name="sp_md">16sp</dimen>
+    <dimen name="sp_lg">18sp</dimen>
+    <dimen name="sp_xl">20sp</dimen>
+    <dimen name="sp_xxl">24sp</dimen>
+</resources>

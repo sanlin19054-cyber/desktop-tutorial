@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STM32 智能車遙控</string>
+    <string name="title_device_list">選擇藍牙設備</string>
+    <string name="label_connect">連接設備</string>
+    <string name="label_disconnect">斷開</string>
+    <string name="label_scan">開始掃描</string>
+    <string name="label_emergency_stop">緊急停車</string>
+    <string name="label_send">發送</string>
+</resources>

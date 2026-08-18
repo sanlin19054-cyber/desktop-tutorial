@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 頁面背景：深色漸變 -->
+    <style name="Theme.CarRemote" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowBackground">@drawable/bg_page</item>
+        <item name="android:statusBarColor">@color/bg_page_start</item>
+        <item name="android:navigationBarColor">@color/bg_page_start</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- 圓形方向鍵按鈕樣式 -->
+    <style name="DirectionButton">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:background">@drawable/btn_direction_bg</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">@dimen/sp_xxl</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- STOP 按鈕樣式 -->
+    <style name="StopButton">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:background">@drawable/btn_stop_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_lg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <!-- 主操作按鈕 -->
+    <style name="PrimaryButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_button_h_lg</item>
+        <item name="android:background">@drawable/btn_primary_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_lg</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 次要按鈕（模式按鈕等） -->
+    <style name="SecondaryButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/dp_button_h</item>
+        <item name="android:background">@drawable/btn_secondary_bg</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">@dimen/sp_md</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 卡片文本標題 -->
+    <style name="CardTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/sp_lg</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 信息標籤 -->
+    <style name="InfoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_tertiary</item>
+        <item name="android:textSize">@dimen/sp_sm</item>
+    </style>
+
+    <!-- 信息值 -->
+    <style name="InfoValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/sp_md</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">140dp</item>
+    </style>
+</resources>

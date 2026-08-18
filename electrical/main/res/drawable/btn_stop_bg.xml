@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- STOP 紅色圓形按鈕 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/danger"/>
+            <stroke android:width="2dp" android:color="#B71C1C"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/text_disabled"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/danger"/>
+            <stroke android:width="2dp" android:color="#B71C1C"/>
+        </shape>
+    </item>
+</selector>

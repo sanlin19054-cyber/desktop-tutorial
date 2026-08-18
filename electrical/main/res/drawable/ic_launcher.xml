@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- APP 圖標：霓虹青方向鍵 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 深色圓形背景 -->
+    <path
+        android:fillColor="#0B1020"
+        android:pathData="M54,2 A52,52 0 1,1 53.99,2 Z"/>
+
+    <!-- 霓虹青外環 -->
+    <path
+        android:strokeColor="#00E0FF"
+        android:strokeWidth="3"
+        android:fillColor="#1A2238"
+        android:pathData="M54,8 A46,46 0 1,1 53.99,8 Z"/>
+
+    <!-- 上箭頭 -->
+    <path
+        android:fillColor="#00E0FF"
+        android:pathData="M54,28 L66,50 L60,50 L60,62 L48,62 L48,50 L42,50 Z"/>
+</vector>
