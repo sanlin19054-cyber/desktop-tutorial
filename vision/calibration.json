@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "智能救援机器人视觉系统",
+    "repository_area": "vision/calibration/",
+    "purpose": "记录GC0308 USB摄像头及救援赛场视觉相关标定参数",
+    "status": "partial",
+    "status_note": "已填写目前由产品资料、设备照片和竞赛文件能够确认的信息；相机内参、畸变、颜色阈值及透视参数需使用实际设备和现场材料进一步标定。"
+  },
+  "competition_context": {
+    "event": "2027年第十届中国大学生工程实践与创新能力大赛",
+    "track": "智能+工程创新赛道",
+    "event_type": "智能救援赛项",
+    "source_note": "根据用户提供的竞赛命题与运行文件整理。决赛相关数量、尺寸、颜色、位置等参数以现场公布为准。"
+  },
+  "camera": {
+    "model": "GC0308",
+    "sensor": "GC0308",
+    "resolution": {
+      "width_px": 640,
+      "height_px": 480,
+      "marketing_spec": "30W (640×480)"
+    },
+    "lens": {
+      "focal_length_mm": 3.6,
+      "aperture": 2.2,
+      "lens_type": "3.6mm 1-2P",
+      "fov_diagonal_deg": 50,
+      "distortion_spec_percent": -25
+    },
+    "physical_size_mm": {
+      "length": 30,
+      "width": 27,
+      "height": 24
+    },
+    "connection": {
+      "type": "USB",
+      "cable_length_mm": 400,
+      "note": "产品资料显示配套USB左弯数据线；资料未明确USB速率标准。"
+    }
+  },
+  "platform": {
+    "computer": "Raspberry Pi 5",
+    "camera_connection_note": "用户设备照片显示摄像头通过USB数据线与树莓派平台连接；树莓派5同时具备USB接口和MIPI摄像头接口。本标定文件按当前GC0308 USB摄像头方案记录。",
+    "reference": "https://pidoc.cn/docs/computers/raspberry-pi-5/"
+  },
+  "intrinsics": {
+    "camera_matrix": [
+      [
+        null,
+        0.0,
+        null
+      ],
+      [
+        0.0,
+        null,
+        null
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "parameters": {
+      "fx": null,
+      "fy": null,
+      "cx": null,
+      "cy": null
+    },
+    "unit": "pixel",
+    "status": "pending_calibration",
+    "method_note": "使用实际GC0308摄像头拍摄棋盘格标定图像后，通过OpenCV等工具计算。不可使用产品焦距3.6mm直接替代fx/fy。"
+  },
+  "distortion": {
+    "model": "pinhole_brown_conrady",
+    "coefficients": {
+      "k1": null,
+      "k2": null,
+      "p1": null,
+      "p2": null,
+      "k3": null
+    },
+    "unit": "dimensionless",
+    "status": "pending_calibration",
+    "spec_reference": {
+      "lens_distortion_marked_percent": -25,
+      "note": "产品资料中的“-25%畸变”是镜头规格信息，不等同于OpenCV标定得到的k1/k2/p1/p2/k3参数。"
+    }
+  },
+  "camera_pose": {
+    "height_cm": null,
+    "pitch_deg": null,
+    "yaw_deg": null,
+    "roll_deg": null,
+    "x_offset_cm": null,
+    "y_offset_cm": null,
+    "reference_frame": "robot_body",
+    "status": "pending_measurement",
+    "note": "需在实际机器人安装完成后测量；照片可用于确认安装形态，但不能替代实测尺寸和角度。"
+  },
+  "image_processing": {
+    "recommended_capture_resolution": [
+      640,
+      480
+    ],
+    "color_space": "HSV",
+    "color_thresholds": {
+      "green_rescue_target": {
+        "h": [
+          null,
+          null
+        ],
+        "s": [
+          null,
+          null
+        ],
+        "v": [
+          null,
+          null
+        ],
+        "source": "现场实际目标颜色标定"
+      },
+      "orange_injured_target": {
+        "h": [
+          null,
+          null
+        ],
+        "s": [
+          null,
+          null
+        ],
+        "v": [
+          null,
+          null
+        ],
+        "source": "现场实际目标颜色标定"
+      },
+      "black_core_target": {
+        "h": [
+          null,
+          null
+        ],
+        "s": [
+          null,
+          null
+        ],
+        "v": [
+          null,
+          null
+        ],
+        "source": "现场实际目标颜色标定"
+      },
+      "light_blue_hazard_target": {
+        "h": [
+          null,
+          null
+        ],
+        "s": [
+          null,
+          null
+        ],
+        "v": [
+          null,
+          null
+        ],
+        "source": "现场实际目标颜色标定"
+      },
+      "red_blue_safe_zone": {
+        "h": [
+          null,
+          null
+        ],
+        "s": [
+          null,
+          null
+        ],
+        "v": [
+          null,
+          null
+        ],
+        "source": "实际比赛场地颜色标定；双方安全区颜色由现场抽签确定"
+      }
+    },
+    "status": "pending_calibration"
+  },
+  "perspective": {
+    "status": "pending_calibration",
+    "image_points": {
+      "top_left": [
+        null,
+        null
+      ],
+      "top_right": [
+        null,
+        null
+      ],
+      "bottom_left": [
+        null,
+        null
+      ],
+      "bottom_right": [
+        null,
+        null
+      ]
+    },
+    "world_points_mm": {
+      "top_left": [
+        null,
+        null
+      ],
+      "top_right": [
+        null,
+        null
+      ],
+      "bottom_left": [
+        null,
+        null
+      ],
+      "bottom_right": [
+        null,
+        null
+      ]
+    },
+    "homography_matrix": null,
+    "note": "需根据实际赛场选取四个可重复识别的地面参考点后计算。"
+  },
+  "rescue_target_reference": {
+    "preliminary_rules": {
+      "normal_material_target": {
+        "color": "green",
+        "shape": "40mm立方体",
+        "size_mm": [
+          40,
+          40,
+          40
+        ],
+        "material": "ABS"
+      },
+      "core_material_target": {
+        "color": "black",
+        "shape": "正三棱锥",
+        "edge_length_mm": 40,
+        "material": "ABS"
+      },
+      "injured_target": {
+        "color": "orange",
+        "shape": "长方体",
+        "size_mm": [
+          80,
+          40,
+          40
+        ],
+        "material": "PLA"
+      },
+      "hazard_target": {
+        "color": "light_blue",
+        "shape": "立方体",
+        "size_mm": [
+          40,
+          40,
+          40
+        ],
+        "material": "ABS",
+        "handling": "不得转运至安全区"
+      }
+    },
+    "scene_reference": {
+      "field_size_mm": [
+        3000,
+        3000
+      ],
+      "safe_zone_colors": [
+        "red",
+        "blue"
+      ],
+      "start_zone_color": "magenta",
+      "safe_zone_separator_width_mm": 20,
+      "field_surrounding_fence_height_max_mm": 100,
+      "field_surrounding_fence_thickness_max_mm": 20
+    },
+    "source_note": "以上为竞赛文件所述初赛信息；决赛目标数量、形状、颜色、重量、大小、位置及任务要求以现场公布为准。"
+  },
+  "calibration_workflow": {
+    "step_1": "固定摄像头安装位置，记录相机高度、俯仰角、左右偏移和机器人坐标系。",
+    "step_2": "以640×480采集棋盘格标定图像，计算fx、fy、cx、cy及畸变系数。",
+    "step_3": "采集实际救援目标与场地颜色样本，建立HSV阈值。",
+    "step_4": "在实际比赛场地或等比例测试场地采集地面参考点，计算透视变换矩阵。",
+    "step_5": "用独立测试图片验证识别、测距/位置估计和透视校正效果。",
+    "step_6": "将最终参数回填本文件，并在vision/calibration/目录记录标定日期与测试条件。"
+  },
+  "traceability": {
+    "camera_product_sheet": "用户提供的GC0308高清摄像头50°产品参数图片",
+    "hardware_photo": "用户提供的Raspberry Pi 5与实际摄像头安装照片",
+    "competition_document": "用户提供的《2027年第十届中国大学生工程实践与创新能力大赛智能+工程创新赛道竞赛命题与运行（发布稿）》",
+    "raspberry_pi_reference": "https://pidoc.cn/docs/computers/raspberry-pi-5/"
+  }
+}
