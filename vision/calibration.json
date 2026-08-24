@@ -46,21 +46,9 @@
   },
   "intrinsics": {
     "camera_matrix": [
-      [
-        null,
-        0.0,
-        null
-      ],
-      [
-        0.0,
-        null,
-        null
-      ],
-      [
-        0.0,
-        0.0,
-        1.0
-      ]
+      [null,  0.0, null],
+      [0.0, null, null],
+      [0.0, 0.0, 1.0]
     ],
     "parameters": {
       "fx": null,
@@ -107,78 +95,33 @@
     "color_space": "HSV",
     "color_thresholds": {
       "green_rescue_target": {
-        "h": [
-          null,
-          null
-        ],
-        "s": [
-          null,
-          null
-        ],
-        "v": [
-          null,
-          null
-        ],
+        "h": [null, null],
+        "s": [null,  null],
+        "v": [null, null],
         "source": "现场实际目标颜色标定"
       },
       "orange_injured_target": {
-        "h": [
-          null,
-          null
-        ],
-        "s": [
-          null,
-          null
-        ],
-        "v": [
-          null,
-          null
-        ],
+        "h": [null, null],
+        "s": [null, null],
+        "v": [null, null],
         "source": "现场实际目标颜色标定"
       },
       "black_core_target": {
-        "h": [
-          null,
-          null
-        ],
-        "s": [
-          null,
-          null
-        ],
-        "v": [
-          null,
-          null
-        ],
+        "h": [null, null],
+        "s": [null, null],
+        "v": [null, null],
         "source": "现场实际目标颜色标定"
       },
       "light_blue_hazard_target": {
-        "h": [
-          null,
-          null
-        ],
-        "s": [
-          null,
-          null
-        ],
-        "v": [
-          null,
-          null
-        ],
+        "h": [null, null],
+        "s": [null, null],
+        "v": [null, null],
         "source": "现场实际目标颜色标定"
       },
       "red_blue_safe_zone": {
-        "h": [
-          null,
-          null
-        ],
-        "s": [
-          null,
-          null
-        ],
-        "v": [
-          null,
-          null
-        ],
+        "h": [null, null],
+        "s": [null, null],
+        "v": [null, null],
         "source": "实际比赛场地颜色标定；双方安全区颜色由现场抽签确定"
       }
     },
@@ -187,40 +130,16 @@
   "perspective": {
     "status": "pending_calibration",
     "image_points": {
-      "top_left": [
-        null,
-        null
-      ],
-      "top_right": [
-        null,
-        null
-      ],
-      "bottom_left": [
-        null,
-        null
-      ],
-      "bottom_right": [
-        null,
-        null
-      ]
+      "top_left": [null, null],
+      "top_right": [null, null],
+      "bottom_left": [null, null],
+      "bottom_right": [null, null]
     },
     "world_points_mm": {
-      "top_left": [
-        null,
-        null
-      ],
-      "top_right": [
-        null,
-        null
-      ],
-      "bottom_left": [
-        null,
-        null
-      ],
-      "bottom_right": [
-        null,
-        null
-      ]
+      "top_left": [null, null],
+      "top_right": [null, null],
+      "bottom_left": [null, null],
+      "bottom_right": [null, null]
     },
     "homography_matrix": null,
     "note": "需根据实际赛场选取四个可重复识别的地面参考点后计算。"
@@ -230,11 +149,7 @@
       "normal_material_target": {
         "color": "green",
         "shape": "40mm立方体",
-        "size_mm": [
-          40,
-          40,
-          40
-        ],
+        "size_mm": [40, 40, 40],
         "material": "ABS"
       },
       "core_material_target": {
@@ -246,34 +161,20 @@
       "injured_target": {
         "color": "orange",
         "shape": "长方体",
-        "size_mm": [
-          80,
-          40,
-          40
-        ],
+        "size_mm": [80, 40, 40],
         "material": "PLA"
       },
       "hazard_target": {
         "color": "light_blue",
         "shape": "立方体",
-        "size_mm": [
-          40,
-          40,
-          40
-        ],
+        "size_mm": [40, 40, 40],
         "material": "ABS",
         "handling": "不得转运至安全区"
       }
     },
     "scene_reference": {
-      "field_size_mm": [
-        3000,
-        3000
-      ],
-      "safe_zone_colors": [
-        "red",
-        "blue"
-      ],
+      "field_size_mm": [3000, 3000],
+      "safe_zone_colors": ["red", "blue"],
       "start_zone_color": "magenta",
       "safe_zone_separator_width_mm": 20,
       "field_surrounding_fence_height_max_mm": 100,
